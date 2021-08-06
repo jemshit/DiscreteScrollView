@@ -5,7 +5,7 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.yarolegovich.discretescrollview.sample"
+        applicationId "com.jemshit.discretescrollview.sample"
         minSdkVersion 19
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 4

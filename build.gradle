@@ -1,20 +1,20 @@
 buildscript {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.5'
+        classpath 'com.android.tools.build:gradle:4.2.2'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
         maven { url "https://maven.google.com" }
         maven { url "https://jitpack.io" }
         google()
+        mavenCentral()
+        jcenter() // https://github.com/yarolegovich/MaterialPreferences/issues/18
     }
 }
 
@@ -23,9 +23,9 @@ task clean(type: Delete) {
 }
 
 ext {
-    compileSdkVersion = 29
-    buildToolsVersion = '29.0.2'
-    targetSdkVersion = 29
+    compileSdkVersion = 30
+    buildToolsVersion = '30.0.2'
+    targetSdkVersion = 30
 
     deps = [
             recycler      : 'androidx.recyclerview:recyclerview:1.0.0',
@@ -33,7 +33,7 @@ ext {
             annotations   : 'androidx.annotation:annotation:1.1.0',
             androidxCompat: 'androidx.appcompat:appcompat:1.1.0',
             glide         : 'com.github.bumptech.glide:glide:4.11.0',
-            materialPrefs : 'com.yarolegovich:mp:1.1.6'
+            materialPrefs : 'com.github.yarolegovich:MaterialPreferences:1.1.6'
     ]
 
     testDeps = [
